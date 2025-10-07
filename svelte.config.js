@@ -4,10 +4,8 @@ import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Allow Svelte + Markdown + SVX files
 	extensions: ['.svelte', '.svx', '.md'],
 
-	// Preprocessors for mdsvex and vite
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
@@ -16,22 +14,21 @@ const config = {
 	],
 
 	kit: {
-		// Static adapter for GitHub Pages
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
-			strict: false // avoids "dynamic routes" errors
+			fallback: 'index.html', // SPA fallback for dynamic routes
+			strict: false // avoids build errors on dynamic routes
 		}),
 
-		// 👇 IMPORTANT for GitHub Pages — your repo name
+		// Base path for GitHub Pages repo
 		paths: {
 			base: '/iks'
 		},
 
-		// Avoid build breaking on HTTP fetch errors
+		// Prerender config
 		prerender: {
-			handleHttpError: 'warn'
+			handleHttpError: 'warn' // avoids build breaking on fetch errors
 		}
 	}
 };
