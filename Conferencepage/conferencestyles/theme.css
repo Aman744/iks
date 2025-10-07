@@ -1,0 +1,104 @@
+
+
+.theme-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevents page scrolling */
+}
+
+.text-section {
+  flex: 1;
+  max-width: 80%;
+  height: 90vh;
+  overflow-y: auto; /* Scroll only inside text section if needed */
+  padding-right: 30px;
+  text-align: justify;
+}
+
+.text-section h1 {
+  font-size: 1.6em; /* Slightly smaller heading */
+  text-align: left;
+}
+
+.text-section p, 
+.text-section ul {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.text-section ul {
+  padding-left: 20px;
+}
+
+.image-section {
+  flex: 1;
+  max-width: 40%;
+  height: 80vh; /* Adjust image height */
+  background: url('/Conferencepage/conferenceimages/theme.jpg') no-repeat center center/cover;
+  border-radius: 10px;
+}
+
+/* Image Section */
+/*.image-section {
+  width: 40%;
+  background: url('/Conferencepage/conferenceimages/theme.jpg') no-repeat center center;
+  background-size: cover;
+}*/
+
+/* Back Button - Fixed */
+.back-button {
+  display: inline-block;
+  margin-top: 10px; /* Reduced space above button */
+  padding: 8px 15px; /* Adjusted padding */
+  background-color: #9ac6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content; /* Prevents stretching */
+}
+
+.back-button:hover {
+  background-color: #7aaddb;
+}
+
+/* Footer */
+/*.footer {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px; /* Adjusted padding 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}*/
+
+footer {
+  background:#9ac6ff;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Left & right alignment */
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: white; /* Adjust color if needed */
+}
+
+.no-underline:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}

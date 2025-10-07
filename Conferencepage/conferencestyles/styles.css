@@ -1,0 +1,491 @@
+/*body {
+  font-family: open Sans;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+html, body {
+  font-family: "Poppins", sans-serif; /* Always provide a fallback */
+  text-align: left; /* Justification on all text may look odd, keep left-aligned */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+h1 {
+  text-transform: uppercase; /* Uppercase for all H1 */
+  font-size: 36px; /* Keep H1 size consistent */
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p, a, li {
+  font-size: 16px; /* Ensures all text is consistent */
+}
+#home h1{
+  text-transform: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:#ffffff;
+  padding: 10px 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu li {
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.logo {
+  height: 50px; /* Adjust logo size */
+  width: auto;
+}
+
+header {
+  background: url('/Conferencepage/conferenceimages/landing.jpg') no-repeat center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  overflow:hidden;
+  padding: 20px 0;
+  margin-top: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0,0.6); /* Adjust transparency as needed */
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  text-align:left;
+  padding:80px 100px;
+ 
+  }
+
+ h1 {
+  font-family: 'Poppins';
+  font-weight: 600; /* Makes it bold */
+  font-size: 2.3rem; /* Increase size */
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-size: 1.3rem; /* Increase size */
+  line-height: 1.3;
+  font-weight: normal;
+  margin-top: 5px;
+}
+.overlay p {
+  font-size: 1.3rem; /* Make date and location bigger */
+  font-family: 'Montserrat';
+}
+
+.overlay p span {
+  font-size: 1.3rem; /* Increase emoji size */
+  font-family: 'Montserrat';
+  color:#9ac6ff;
+  text-transform:capitalize;
+}
+.icon{
+  color:#9ac6ff !important;
+  font-size: 1.3rem;
+  font-family:'poppins', sans-serif !important;
+}
+/*icon {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(98%) saturate(1493%) hue-rotate(200deg) brightness(98%) contrast(97%);
+}*/
+
+#about {
+  text-align: center;
+  padding: 50px 5%;
+  background-color: #ffffff; /* Light background */
+}
+
+#about h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: poppins;
+  text-align: left;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 100%;
+  padding:0.5%;
+}
+.about-container p {
+  text-align: left;
+  line-height: 1.6; /* Improve readability */
+  font-size: 1rem; /* Adjust size if needed */
+  max-width: 800px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: #434343;
+}
+
+.column h2 {
+  color: #9ac6ff; /* Light Blue Heading */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.column p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+ 
+.learn-more {
+  text-decoration: none; /* Removes the underline */
+  font-weight: bold;
+  color: #9ac6ff; /* Change this to your preferred color */
+}
+ 
+/* CONFERNCE OBJECTIVES */ 
+/* General Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  gap: 10px;
+  padding: 20px;
+  max-width: 90vw; /* Prevents overflowing */
+  margin: auto; /* Centers the grid */
+}
+
+
+/* Ensuring all boxes have the same size */
+.grid div {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes them squares */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* Keep Same Colors Before & After Flip */
+.flip-box:nth-child(1) .flip-front, .flip-box:nth-child(1) .flip-back { background: white; color: black; }
+.flip-box:nth-child(2) .flip-front, .flip-box:nth-child(2) .flip-back { background: #9ac6ff; color: black; }
+.flip-box:nth-child(3) .flip-front, .flip-box:nth-child(3) .flip-back { background: black; color: white; }
+.flip-box:nth-child(4) .flip-front, .flip-box:nth-child(4) .flip-back { background: #9ac6ff; color: white; }
+.flip-box:nth-child(5) .flip-front, .flip-box:nth-child(5) .flip-back { background: #9ac6ff; color: black; }
+.flip-box:nth-child(6) .flip-front, .flip-box:nth-child(6) .flip-back { background: black; color: white; }
+.flip-box:nth-child(7) .flip-front, .flip-box:nth-child(7) .flip-back { background: white; color: black; }
+.flip-box:nth-child(8) .flip-front, .flip-box:nth-child(8) .flip-back { background: #9ac6ff; color: black; }
+
+/* Image Boxes */
+.img-box {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Flip Box Styling */
+.flip-box {
+  perspective: 1000px;
+  height: 100%;
+  width: 100%;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-box:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flip-front h2{
+  font-size:1.6em;
+}
+
+/* Flip Box Back Side */
+.flip-back {
+  background: #333;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/*Partners supported By */
+
+#partners {
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light background, change as needed */
+  text-align: center;
+}
+
+#partners h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+#partners .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#partners .logos img {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#partners .logos img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #partners .logos img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  #partners h2 {
+    font-size: 1.5rem;
+  }
+
+  #partners .logos img {
+    max-width: 100px;
+  }
+}
+
+
+#venue {
+  display: flex;
+  flex-direction: column;
+  align-items: left;  /* Centers content horizontally */
+  justify-content: left; /* Centers content vertically */
+  padding: 70px 5%; /* Match this with other sections */
+  min-height: 500px; /* Ensures uniform height */
+}
+#venue h1 {
+  font-size: 2em; /* Matches heading size with other sections */
+  text-align: left;
+  color:#9ac6ff;
+}
+#venue iframe {
+  border: none;
+  border-radius: 10px; /* Optional: Makes the map look smoother */
+  max-width: 1200px; /* Ensures it doesn't stretch too much */
+  width: 100%; /* Keeps it responsive */
+}
+
+
+/* Responsive Fix - Adjusts Grid for Small Screens */
+@media (max-width: 900px) {
+  .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+  }
+}
+
+/*.logos img {
+  width: 100px;
+  margin: 10px;
+} */
+
+footer {
+  background:#9ac6ff;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Left & right alignment */
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: white; /* Adjust color if needed */
+}
+
+.no-underline:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Responsive Fixes */
+
+/* Small screens (below 900px) */
+@media (max-width: 900px) {
+  /* Adjust Navbar */
+  nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu li {
+    margin: 5px 0;
+  }
+
+  /* Adjust Header */
+  header {
+    height: 50vh; /* Reduce height on smaller screens */
+    padding: 10px;
+  }
+
+  .overlay {
+    padding: 40px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay p {
+    font-size: 1.1rem;
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column {
+    padding: 15px;
+  }
+
+  /* Grid Layout for Conference Activities */
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    gap: 15px;
+  }
+
+  /* Venue Section */
+  #venue {
+    align-items: center;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  #venue iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Extra Small Screens (below 600px) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr); /* Switch to 1 column */
+  }
+
+  nav {
+    padding: 5px;
+  }
+
+  .nav-menu {
+    gap: 5px;
+  }
+
+  .logo {
+    height: 40px; /* Adjust logo size */
+  }
+
+  .footer-container {
+    font-size: 14px;
+  }
+}

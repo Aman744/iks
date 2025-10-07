@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Image with Overlay */
+.subtheme-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/Conferencepage/conferenceimages/Csubtheme.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Semi-transparent black overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Adjust transparency as needed */
+}
+
+/* Content Section */
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  color: white;
+  text-align: left;
+}
+
+/* Heading & Paragraphs */
+.content h1 {
+  margin-bottom: 15px;
+  color:#9ac6ff;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Box Container */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Individual Box */
+.box {
+  flex: 1;
+  min-width: 320px; /* Ensures responsiveness */
+  max-width: 45%; /* Keeps three boxes in a row */
+  background: transparent;
+  padding: 20px;
+  text-align: left;
+  position:relative;
+}
+
+/* Box Title */
+.box h2 {
+  background: #ffffff;  /* White background */
+  color: #9ac6ff;  /* Blue text */
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: block; 
+  width:100%;
+  text-align:center;
+  font-size:medium;
+}
+
+/* List inside the box */
+.box ul {
+  list-style-type: disc;
+  padding-left: 25px;
+  width:100%;
+}
+
+.box ul li {
+  color: #ffffff; /* Black text */
+  margin-top: 10px;
+
+}
+
+footer {
+  background:#9ac6ff;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Left & right alignment */
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: white; /* Adjust color if needed */
+}
+
+.no-underline:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
+/* Responsive Design */
+@media (max-width: 900px) {
+  .box {
+      max-width: 100%; /* Stack boxes vertically on smaller screens */
+  }
+}

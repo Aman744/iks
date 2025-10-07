@@ -1,0 +1,1 @@
+import{s as e}from"./scheduler.a528615c.js";import{S as a,i as n}from"./index.aa4bdcec.js";const l={title:"PM-YUVA-3.0",date:"2025-03-11T00:00:00.000Z",link:"https://innovateindia.mygov.in/yuva-2025/",description:"IKS is one among the 3 themes of PM Yuva 3.0"};class m extends a{constructor(t){super(),n(this,t,null,null,e,{})}}export{m as default,l as metadata};
