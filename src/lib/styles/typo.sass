@@ -1,0 +1,80 @@
+.bold
+  font-weight: bold
+
+.themed
+  color: var(--orred)
+
+.greyed
+  color: #696969
+
+.whited
+  color: #FFFFFF
+
+a
+  text-decoration: none
+  color: var(--orred)
+  &:hover
+    text-decoration: underline
+
+a.blanker
+  text-decoration: none
+  color: inherit
+  &:hover
+    color: var(--orred)
+
+.ta-c
+  text-align: center
+  @media screen and (max-width: 1024px)
+    &.mleft
+      text-align: left
+
+p, li
+  line-height: 1.5
+
+ol, ul
+  list-style-position: outside
+  padding-left: 16px
+  @media screen and (min-width: 1025px)
+    padding-left: 24px
+
+@media screen and (min-width: 1025px)
+  p, li
+    font-size: 19px
+    &.small
+      font-size: 15px
+  blockquote
+    border-left: 4px solid var(--orred)
+    padding-left: 16px
+    font-style: italic
+    margin-left: 0
+  h6
+    font-size: 21px
+  h5
+    font-size: 1.44rem
+  h4
+    font-size: 1.725rem
+    margin-top: 1.5rem
+  h1
+    font-size: 2em
+
+@media screen and (max-width: 1025px)
+  p
+    font-size: 16px
+    &.small
+      font-size: 12px
+  blockquote
+    border-left: 4px solid var(--orred)
+    padding-left: 16px
+    font-style: italic
+    margin-left: 0
+    margin-right: 0
+    padding-right: 16px
+  h6
+    font-size: 18px
+  h5
+    font-size: 21px
+  h4
+    font-size: 24px
+    margin-top: 1.5rem
+  h1
+    font-size: 27px

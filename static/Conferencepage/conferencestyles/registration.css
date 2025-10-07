@@ -1,0 +1,96 @@
+
+.registration-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+  color: #333;
+}
+
+.image-section {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+h1 {
+  color: #9ac6ff;
+  text-align: left;
+}
+
+h2 {
+  color:#9ac6ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/*.register-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #9ac6ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+} */
+
+.registration-closed {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/*.disabled {
+  pointer-events: none;
+  background: gray; /* Indicate it's inactive */
+  /*opacity: 0.6;
+  display: inline-block;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}*/
+
+footer {
+  background:#9ac6ff;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Left & right alignment */
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: white; /* Adjust color if needed */
+}
+
+.no-underline:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}

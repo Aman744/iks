@@ -1,0 +1,292 @@
+/* General Styles */
+.about {
+  text-align: left;
+  padding: 50px 20px;
+  background-color: #ffffff; /* Light background */
+}
+
+#about h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.about-container {
+  display: flex;
+  justify-content: left;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+  color: #9ac6ff; /* Light Blue Heading */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.overlay-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: rgb(43, 41, 41); /* Text color */
+  padding: 40px;
+}
+
+.overlay-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(27, 27, 27, 0.5); /* Dark overlay, adjust opacity as needed */
+  z-index: 1;
+}
+
+.text-box {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+.text-box.left {
+  margin-left: 5%;
+}
+.text-box.right {
+  margin-left: auto;
+  margin-right: 5%;
+}
+.learn-more {
+  color: blue;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* Conference Objectives Section */
+#objectives h2 {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+}
+
+#objectives::before {
+  background: rgba(52, 180, 223, 0.7); /* Blue tint overlay */
+}
+
+/* Conference Theme Section */
+#theme h2 {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+}
+
+#theme::before {
+  background: rgba(0, 0, 0, 0.3);  
+}
+
+/* Background Image with Overlay */
+/*#subthemes {
+position: relative;
+background: url('/Conferencepage/conferenceimages/Csubtheme.jpg') no-repeat center center/cover;
+padding: 80px 20px;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: center;
+padding-left: 60px;
+}
+
+#subthemes::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.75);
+z-index: 1;
+}
+
+#subthemes h2 {
+position: relative;
+z-index: 2;
+color: #9ac6ff;
+text-transform: uppercase;
+text-align: left;
+margin-bottom: 10px;
+}
+
+#subthemes p {
+position: relative;
+z-index: 2;
+color: white;
+margin-bottom: 20px;
+text-align: left;
+max-width: 800px;
+font-size: 18px;
+}
+
+.subtheme-container {
+position: relative;
+display: flex;
+justify-content: flex-start;
+gap: 20px;
+z-index: 2;
+}
+
+.subtheme-box {
+background: white;
+color: #9ac6ff;
+text-align: center;
+font-weight: bold;
+text-decoration: none;
+padding: 20px;
+border: 2px solid #9ac6ff;
+border-radius: 8px;
+width: 300px;
+transition: 0.3s;
+font-size: 20px;
+}
+
+.subtheme-box:hover {
+background: #9ac6ff;
+color: white;
+} */
+
+/*---subtheme new css , here media os added to comment all the subtheme at a time*/
+
+/* Background Image with Overlay*/
+@media screen and (max-width: 1px) { 
+.subtheme-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('/Conferencepage/conferenceimages/Csubtheme.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Semi-transparent black overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Adjust transparency as needed */
+}
+
+/* Content Section */
+.content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  color: white;
+  text-align: left;
+}
+
+/* Heading & Paragraphs */
+.content h1 {
+  margin-bottom: 15px;
+  color:#9ac6ff;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Box Container */
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Individual Box */
+.box {
+  flex: 1;
+  min-width: 320px; /* Ensures responsiveness */
+  max-width: 45%; /* Keeps three boxes in a row */
+  background: transparent;
+  padding: 20px;
+  text-align: left;
+  position:relative;
+}
+
+/* Box Title */
+.box h2 {
+  background: #ffffff;  /* White background */
+  color: #9ac6ff;  /* Blue text */
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: block; 
+  width:100%;
+  text-align:center;
+  font-size:medium;
+}
+
+/* List inside the box */
+.box ul {
+  list-style-type: disc;
+  padding-left: 25px;
+  width:100%;
+}
+
+.box ul li {
+  color: #ffffff; /* Black text */
+  margin-top: 10px;
+
+} 
+}
+
+footer {
+background: #9ac6ff;
+color: #ffffff;
+padding: 10px;
+text-align: center;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1100px;
+margin: auto;
+}
+
+.no-underline {
+text-decoration: none;
+color: white;
+}
+
+.no-underline:hover {
+text-decoration: underline;
+}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+
+body, html
+  margin: 0
+  box-sizing: border-box
+  font-family: 'Inter', sans-serif
+
+*
+  box-sizing: border-box 
+
+:root
+  box-sizing: border-box
+  --orred: #FF8000
+  --lightgrey: #e7e7e7
+
+.bdr
+  border: 1px solid red
+
+small, em, p, caption, cite, blockquote, h6, h5, h4, h3, h2, h1, ol, ul
+  margin-top: 0
+  margin-bottom: 0
+
+button.blanker
+  background: none
+  border: none
+  outline: none
+  padding: 0
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+button
+  background: var(--orred)
+  color: #FFFFFF
+  border: 1px solid var(--orred)
+  padding: 8px 16px
+  cursor: pointer
+  transition: all 0.08s cubic-bezier(0.770, 0.100, 0.375, 0.815)
+  transform-origin: center center
+  &:hover
+    transform: scale(0.95)
+
+//containers................................................................................................................................
+
+.column, .row
+  display: flex
+
+.column
+  flex-direction: column
+  &.ycenter
+    justify-content: center
+  &.ytop
+    justify-content: flex-start
+  &.xcenter
+    align-items: center
+  @media screen and (max-width: 1024px)
+    &.xcenter.mleft
+      align-items: flex-start
+
+.row
+  flex-direction: row
+  &.ycenter
+    align-items: center
+  &.xcenter
+    justify-content: center
+  &.xbetween
+    justify-content: space-between
+  @media screen and (max-width: 1024px)
+    &.mcol
+      flex-direction: column
+    &.xcenter.mleft, .mleft
+      align-items: flex-start
+    &.ycenter.mright
+      align-items: flex-end
+
+.grid
+  display: grid
+  grid-auto-flow: row
+  grid-template-rows: auto
+  @media screen and (min-width: 1025px)
+    &.two
+      grid-template-columns: 1fr 1fr
+    &.three
+      grid-template-columns: 1fr 1fr 1fr
+    &.four
+      grid-template-columns: 1fr 1fr 1fr 1fr
+  @media screen and (max-width: 1024px)
+    &.two
+      grid-template-columns: 1fr
+    &.three
+      grid-template-columns: 1fr
+    &.four
+      grid-template-columns: 1fr
+      &.stay2
+        grid-template-columns: 1fr 1fr
+
+.container100vh
+  min-height: 100vh
+  &.withfooter
+    min-height: calc(100vh - 64px)
+  @media screen and (min-width: 1025px)
+    padding-top: 80px
+    padding-bottom: 80px
+    &.istop
+      padding-top: 128px
+  @media screen and (max-width: 1024px)
+    padding-top: 80px
+    padding-bottom: 80px  
+    &.istop
+      padding-top: 128px
+
+.padded
+  @media screen and (max-width: 728px)
+    padding-left: 16px
+    padding-right: 16px
+  @media screen and (min-width: 729px) and (max-width: 1024px)
+    padding-left: 32px
+    padding-right: 32px
+  @media screen and (min-width: 1025px) and (max-width: 1200px)
+    padding-left: 64px
+    padding-right: 64px
+  @media screen and (min-width: 1201px)
+    padding-left: 160px
+    padding-right: 160px
+
+//gaps................................................................................................................................
+
+.rgap4
+  row-gap: 4px
+.rgap8
+  row-gap: 8px
+.rgap16
+  row-gap: 16px
+.rgap24
+  row-gap: 24px
+.rgap32
+  row-gap: 32px
+.cgap8
+  column-gap: 8px
+.cgap16
+  column-gap: 16px
+.cgap32
+  column-gap: 32px
+
+.ptop32
+  padding-top: 32px
+.pbot32
+  padding-bottom: 32px
+
+//sizes................................................................................................................................
+
+.width80
+  @media screen and (min-width: 1025px)
+    width: 80%
+
+.width70
+  @media screen and (min-width: 1025px)
+    width: 70%
+
+//borders................................................................................................................................
+
+.bordtop
+  border-top: 1px solid var(--lightgrey)
+
+.bordbot
+  border-bottom: 1px solid var(--lightgrey)
+
+// Dropdown Styles (New Section) added date jan 2025
+.dropdown
+  position: relative
+  display: inline-block
+
+.dropdown-menu
+  display: none
+  position: absolute
+  top: 100%
+  left: 0
+  background-color: #fff
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  padding: 10px 0
+  z-index: 10
+  min-width: 150px
+
+.dropdown-menu li
+  list-style: none
+  padding: 5px 20px
+
+.dropdown-menu li a
+  color: #333
+  text-decoration: none
+  display: block
+
+.dropdown-menu li a:hover
+  color: #007bff
+
+.dropdown:hover .dropdown-menu
+  display: block

@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.schedule-section {
+  background: url('/Conferencepage/conferenceimages/schedule_background.png') no-repeat center center;
+  background-size: cover;
+  padding: 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.schedule-header {
+  padding: 10px;
+  
+}
+
+.schedule-header h2 {
+  color: #fff; /* white text on semi-white box */
+  font-size: 5rem;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pdf-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9ac6ff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.day-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.day-tab {
+  padding: 10px 20px;
+  border: 2px solid #9ac6ff;
+  border-radius: 20px;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.day-tab:hover {
+  background: #9ac6ff;
+  color: #fff;
+}
+
+.schedule-content {
+  margin-top: 30px;
+  max-width: 800px;         /* optional for layout */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.day-schedule {
+  display: none;
+}
+
+.day1 {
+  display: block;
+  display:center;
+}
+
+.schedule-row {
+  display: flex;
+  justify-content: center;  /* center content inside the row */
+  align-items: flex-start;
+  border-top: 1px solid #ccc;
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.schedule-row:first-child {
+  border-top: none;
+}
+
+.time {
+  width: 180px;
+  font-weight: bold;
+  color: #434343;
+  flex-shrink: 0;
+}
+
+.event {
+  flex: 1;
+  color: #434343;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.event em {
+  color: #9ac6ff
+}
+
+/* Hover logic */
+.day-tab[data-day="day2"]:hover ~ .schedule-content .day1,
+.day-tab[data-day="day3"]:hover ~ .schedule-content .day1 {
+  display: none;
+}
+
+.day-tab[data-day="day2"]:hover ~ .schedule-content .day2 {
+  display: block;
+}
+
+.day-tab[data-day="day3"]:hover ~ .schedule-content .day3 {
+  display: block;
+}
+
+/* Drop down */
+.toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #9ac6ff;
+  margin-left: 5px;
+}
+
+.toggle-btn:hover {
+  color: #9ac6ff;
+}
+ /*-------filter button-----*/
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+/* Remove background and border here because .day-tab already handles that */
+.filter-btn {
+  all: unset; /* resets default button styling */
+  padding: 10px 20px;
+  border: 2px solid #9ac6ff;
+  border-radius: 20px;
+  color: #000;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+/* Dropdown menu styles */
+.filter-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  width: 220px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.filter-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.filter-menu a:hover {
+  background-color: #eee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adding quick buttons fo all sessions */
+
+.quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.quick-btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-align: center;
+  min-width: 140px;
+}
+
+/* Different colors for each type */
+.btn-plenary {
+  background-color: #007bff;
+}
+.btn-panel {
+  background-color: #28a745;
+}
+.btn-open {
+  background-color: #ff9800;
+}
+.btn-keynote {
+  background-color: #9c27b0;
+}
+.btn-spotlight {
+  background-color: #e91e63;
+}
+
+.quick-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .schedule-row {
+    flex-direction: column;
+  }
+
+  .time {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .event {
+    font-size: 14px;
+  }
+
+  .schedule-header h2 a {
+    font-size: 24px;
+  }
+
+  .day-tab {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .day-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}

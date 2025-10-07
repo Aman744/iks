@@ -1,0 +1,6 @@
+
+{
+  "redirects": [
+    { "source": "/diiksha", "destination": "/diiksha/index.html", "permanent": true }
+  ]
+}
