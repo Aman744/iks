@@ -17,18 +17,17 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html', // SPA fallback for dynamic routes
-			strict: false // avoids build errors on dynamic routes
+			fallback: 'index.html',
+			strict: false
 		}),
 
-		// Base path for GitHub Pages repo
+		// Set base to your repo name for GitHub Pages
 		paths: {
 			base: '/iks'
 		},
 
-		// Prerender config
 		prerender: {
-			handleHttpError: 'warn' // avoids build breaking on fetch errors
+			handleHttpError: 'warn'
 		}
 	}
 };
