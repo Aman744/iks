@@ -21,7 +21,7 @@
   <div class="row ycenter">
     {#if $mediaClass === 'wide' || $mobileBar}
     <nav class="row ycenter cgap16 mcol mright" on:click={handleClose} on:keydown={handleClose}>
-    <p class="small"><a class="blanker" href="/home">HOME</a></p>
+    <p class="small"><a class="blanker" href="/">HOME</a></p>
     <p class="small"><a class="blanker" href="/about">ABOUT</a></p>
     <p class="small"><a class="blanker" href="/diiksha/index.html">DIIKSHA</a></p>
     <!---<p class="small"><a class="blanker" href="/108phd">108 PHDs</a></p>-->
