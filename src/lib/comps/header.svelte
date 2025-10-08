@@ -21,27 +21,27 @@
   <div class="row ycenter">
     {#if $mediaClass === 'wide' || $mobileBar}
     <nav class="row ycenter cgap16 mcol mright" on:click={handleClose} on:keydown={handleClose}>
-    <p class="small"><a class="blanker" href="./">HOME</a></p>
-    <p class="small"><a class="blanker" href="./about">ABOUT</a></p>
-    <p class="small"><a class="blanker" href="./diiksha/index.html">DIIKSHA</a></p>
+    <p class="small"><a class="blanker" href="/home">HOME</a></p>
+    <p class="small"><a class="blanker" href="/about">ABOUT</a></p>
+    <p class="small"><a class="blanker" href="/diiksha/index.html">DIIKSHA</a></p>
     <!---<p class="small"><a class="blanker" href="/108phd">108 PHDs</a></p>-->
-    <p class="small"><a class="blanker" href="./Conferencepage/index.html">CONFERENCES</a></p>
+    <p class="small"><a class="blanker" href="/Conferencepage/index.html">CONFERENCES</a></p>
     <!---<p class="small"><a class="blanker" href="/sangama">SAṄGAMA</a></p>-->
     <!-- SAṄGAMA menu with subtabs -->
     <div class="dropdown">
       <p class="small dropdown-title">
-          <a class="blanker" href="./sangama">SAṄGAMA</a>
+          <a class="blanker" href="/sangama">SAṄGAMA</a>
       </p>
       <ul class="dropdown-menu">
-          <li><a class="blanker" href="./sangama/overview">Overview</a></li>
-          <li><a class="blanker" href="./sangama/sangama 2023">Sangama 2023</a></li>
+          <li><a class="blanker" href="/sangama/overview">Overview</a></li>
+          <li><a class="blanker" href="/sangama/sangama 2023">Sangama 2023</a></li>
           <li><a class="blanker" href="https://www.theiksha.org/events/iksha-sangama-2024">Sangama 2024</a></li>
       </ul>
   </div>
-    <p class="small"><a class="blanker" href="./journal">JOURNAL</a></p>
+    <p class="small"><a class="blanker" href="/journal">JOURNAL</a></p>
     <!---<p class="small"><a class="blanker" href="/blog">BLOG</a></p>-->
-    <p class="small"><a class="blanker" href="./events">IKS NEWS AND EVENTS</a></p>
-    <p class="small"><a class="blanker" href="./contact">CONTACT</a></p>
+    <p class="small"><a class="blanker" href="/events">IKS NEWS AND EVENTS</a></p>
+    <p class="small"><a class="blanker" href="/contact">CONTACT</a></p>
     
   
     </nav>
