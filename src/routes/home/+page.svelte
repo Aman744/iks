@@ -1,6 +1,6 @@
 <div class="padded column container100vh withfooter ycenter rgap32">
 	<div class="column xcenter rgap32">
-		<img class="diya" src="/images/ik2.png" alt="diya" />
+		<img class="diya" src="./images/ik2.png" alt="diya" />
 		<div class="column rgap16 ta-c mleft">
 			<h1>Welcome to the IKS and Heritage Association (IKSHA)</h1>
 			<p class="themed">Preserving and promoting Indian Knowledge Systems.</p>
